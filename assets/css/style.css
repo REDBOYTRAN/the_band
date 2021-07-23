@@ -1,0 +1,496 @@
+/* reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.333%;
+}
+
+.col-twice {
+    width: 50%;
+}
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.mar-right-m8 {
+    margin-right: -8px !important;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    padding: 8px 16px;
+    margin: 16px 0;
+    border-radius: 2px;
+    border: none;
+}
+
+.buy-tickets:hover,
+.modal-close:hover,
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+/* 
+1. từ ngoài vào trong
+2. từ trên xuống dưới
+3. tổng quan đến chi tiết
+ */
+
+/* 
+1. vị trí
+2. kích thước
+3. màu sắc
+4. kiểu dáng (kiểu chữ, sharp,...)
+ */
+
+html {
+    font-family: "sato", sans-serif;
+    scroll-behavior: smooth;
+}
+
+#nav {
+    /* set cho nav một block bằng inline của nó (để chừa chỗ cho search-btn) */
+    display: inline-block;
+}
+
+#nav > li {
+    /* mặc định display của li là list-item, nghĩa là show theo từng dòng. Ta sửa nó lại thành inline-block để inline là thành một hàng để block là tận dụng tính chất khối để có thể đặt được kích thước padding top và bottom */
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a{
+    /* ý nghĩa: khi hover vào li, thì con của li là a được hover */
+    color: black;
+    background-color: #ccc;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    font-size: 15px;
+    /* mặc định thẻ a chỉ là "display: inline" thôi, mà inline thì không có tính chất reset chiều rộng và cao nên nó mất đi ăn theo line-height, nên phải thêm inline-block để nó ăn theo chiều cao của line-height là 46px */
+    display: inline-block;
+}
+
+#nav .nav-icon {
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+}
+
+#header .search-btn {
+    cursor: pointer;
+    float: right;
+    line-height: 46px;
+    padding: 0 23px;
+}
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #f44336;
+}
+
+#header .search-icon {
+    color: white;
+}
+
+#nav .subnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: none;
+}
+
+#nav .subnav a {
+    color: black;
+    display: block;
+    padding-left: 12px;
+    line-height: 38px;
+}
+
+#nav ul {
+    list-style-type: none;
+    min-width: 160px;
+}
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content {
+    color: white;
+    position: absolute;
+    bottom: 47px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#content {
+    background-color: white;
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+#content .section-heading {
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform:uppercase;
+    font-size: 30px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content .section-sub-heading {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    line-height: 1.5;
+    font-size: 15px;
+    margin: 15px;
+}
+
+#content .about-text {
+    text-align: justify;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-list {
+    padding: 32px 0;
+    text-align: center;
+    /* một cách để xoá float của member-item */
+    /* overflow: hidden; */
+}
+
+
+#content .member-name {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-avt {
+    width: 60%;
+    border-radius: 4px;
+    margin: 0 0 16px;
+}
+
+#content .tour-section {
+    background-color: black;
+    color: white;
+}
+
+#content .sold-out {
+    background-color: #f44336;
+    color: white;
+    margin: 0 0 0 16px;
+    padding: 0 8px;
+    display: inline-block;
+}
+
+#content .month-list {
+    background-color: white;
+    color: #757575;
+    list-style: none;
+    line-height: 1.5;
+    font-size: 15px;
+    font-family: lato;
+}
+#content .quantity {
+    display: block;
+    background-color: black;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    float: right;
+    margin-right: 16px;
+}
+
+#content .place-section {
+    padding: 32px 8px;
+    font-family: lato, sans-serif;
+    margin-bottom: 16px;
+    color: black;
+}
+
+#content .place-img {
+    width: 100%;
+    display: block;
+}
+
+#content .place-img:hover {
+    width: 100%;
+    opacity: 0.60;
+}
+
+#content .place-content {
+    background-color: #fff;
+    padding: 16px 16px 0;
+    font-size: 15px;
+}
+
+#content b {
+    margin: 15px 0;
+}
+
+#content .place-date {
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+#content .place-des {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+#content .month {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+}
+
+/* contact form */
+.contact-content {
+    padding: 32px 0;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    /* thêm block để sử dụng được width */
+    display: inline-block; 
+}
+.contact-form .input-form{
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+/* map */
+.map-img {
+    width: 100%;
+    display: block;
+    filter: grayscale(50%);
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    opacity: 0.6;
+}
+#footer a {
+    color: #000;
+}
+#footer p {
+    font-size: 15px;
+    margin: 15px 0;
+}
+#footer i {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 15px;
+}
+
+#footer i:hover {
+    opacity: 0.6;
+}
+
+/* modal-section */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .4s;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    padding: 32px 16px;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-cart-icon {
+    padding-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 0 16px;
+}
+
+.modal-label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-family: lato, sans-serif;
+}
+
+.modal-input {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.buy-tickets {
+    width: 100%;
+    padding: 16px;
+    margin: 16px 0;
+    background: #009688;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+}
+
+.modal-help {
+    margin: 15px 0;
+    text-align: right;
+}
+
+.help-link {
+    color: #2196F3;
+}
+
