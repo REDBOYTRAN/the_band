@@ -130,12 +130,14 @@ html {
     position: relative;
     top: 1px;
 }
-
+#header .menu-btn,
 #header .search-btn {
+    text-align: center;
     cursor: pointer;
     float: right;
     line-height: 46px;
     padding: 0 23px;
+    color: #fff;
 }
 
 #header .search-btn:hover {
@@ -143,8 +145,13 @@ html {
     background-color: #f44336;
 }
 
-#header .search-icon {
-    color: white;
+#header .menu-btn {
+    display: none;
+}
+
+#header .menu-btn:hover {
+    background-color: #ccc;
+    color: #000;
 }
 
 #nav .subnav {
@@ -181,6 +188,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    overflow: hidden; /*mobile*/
 }
 
 #slider {
@@ -216,6 +224,7 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%; /*responsive */
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;
@@ -242,6 +251,7 @@ html {
 }
 
 #content .about-text {
+    line-height: 1.5;
     text-align: justify;
     margin: 15px 0;
     font-size: 15px;

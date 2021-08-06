@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/img/icon_theband.jpg" type="image/x-icon"/>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>The Band</title>
@@ -38,6 +39,10 @@
                 <i class="search-icon ti-search"></i>
             </div>
             <!-- end: search -->
+            <div id="menu-btn" class="menu-btn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            
 
         </div>
         <!-- slider -->
@@ -202,42 +207,6 @@
         </div>
     </div>
 
-    <script>
-        const buyBtns = document.querySelectorAll('.js-buy-tickets')
-        const modal = document.querySelector('.js-modal')
-        const modalContainer = document.querySelector('.js-modal-container')
-        const closeBtn = document.querySelector('.js-modal-close')
-        function showBuyTickets() {
-            modal.classList.add('open')
-        }
-        function closeBuyTickets() {
-            modal.classList.remove('open')
-        }
-
-        // function showBuyTickets() {
-        //     modal.style.display = 'flex'
-        // }
-        // function closeBuyTickets() {
-        //     modal.style.display = 'none'
-        // }
-        // function outsideClick(e) {
-        //     if(e.target == modal) {
-        //         closeBuyTickets()
-        //     }
-        // }
-
-        for(const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTickets)
-        }
-
-        closeBtn.addEventListener('click', closeBuyTickets)
-
-        modal.addEventListener('click', closeBuyTickets)
-        //viết hàm bên trong không cần đặt tên hàm
-        modalContainer.addEventListener('click', function(event) {
-            event.stopPropagation()
-        })
-        
-    </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
