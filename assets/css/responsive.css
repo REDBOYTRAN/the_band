@@ -17,6 +17,17 @@
     #nav > li:first-child {
         display: inline-block;
     }
+    #nav .subnav {
+        position: inherit;
+        background-color: grey;
+    }
+    #nav .subnav a {
+        color: white;
+        padding-left: 40px;
+    }
+    #header {
+        overflow: hidden;
+    }
     #header .search-btn {
         display: none;
     }
