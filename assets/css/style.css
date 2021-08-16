@@ -58,6 +58,7 @@
     margin: 16px 0;
     border-radius: 2px;
     border: none;
+    text-align: center;
 }
 
 .buy-tickets:hover,

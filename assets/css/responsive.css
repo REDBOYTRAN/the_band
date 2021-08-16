@@ -8,6 +8,19 @@
 }
 /* Mobile */
 @media (max-width: 740px) {
+    .s-col-ful, .s-full-width {
+        width: 100%;
+    }
+    .s-mt-8 {
+        margin-top: 8px;
+    }
+    .s-btn {
+        float: none !important;
+        padding: 8px 8px;
+     }
+    .text-content {
+        display: none;
+    }
     #nav {
         display: block;
     }
@@ -19,11 +32,11 @@
     }
     #nav .subnav {
         position: inherit;
-        background-color: grey;
+        background-color: #333;
     }
     #nav .subnav a {
         color: white;
-        padding-left: 40px;
+        padding: 5px 40px;
     }
     #header {
         overflow: hidden;
@@ -33,6 +46,25 @@
     }
     #header .menu-btn {
         display: block;
+    }
+    #content .place-section {
+        padding: 32px 0px;
+    }
+    #content .row {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    #content .place-item {
+        padding: 0;
+        margin-bottom: 16px;
+    }
+    #content .mg-lr {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    #contact .contact-form {
+        margin-top: 16px;
     }
     
 }
