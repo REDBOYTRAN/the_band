@@ -1,13 +1,46 @@
 /* PC */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
 
 }
+
+/* Tablet & Mobile */
+@media (max-width: 63.9375em) {
+    .btn {
+        padding: 15px 16px;
+    }
+    .contact-form .input-form {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .s-btn {
+        font-size: 16px;
+    }
+    .socials-list {
+        font-size: 48px;
+    }
+    #footer a {
+        padding: 0px 4px;
+    }
+    #footer p {
+        margin: 8px 0px;
+        padding: 8px;
+    }
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+    .contact-info {
+        line-height: 2;
+    }
+}
 /* Tablet */
-@media (max-width: 1024px) and (min-width: 740px) {
-    
+@media (max-width: 63.9375em) and (min-width: 46.25em) {
+    #content .m-row {
+        margin: 0px -8px 16px;
+        padding: 32px 0px;
+    }
 }
 /* Mobile */
-@media (max-width: 740px) {
+@media (max-width: 46.1875em) {
     .s-col-ful, .s-full-width {
         width: 100%;
     }
@@ -16,7 +49,7 @@
     }
     .s-btn {
         float: none !important;
-        padding: 8px 8px;
+        padding: 16px 8px;
      }
     .text-content {
         display: none;
@@ -47,6 +80,7 @@
     #header .menu-btn {
         display: block;
     }
+    /* tour */
     #content .place-section {
         padding: 32px 0px;
     }
@@ -59,12 +93,13 @@
         padding: 0;
         margin-bottom: 16px;
     }
+    /* contact */
     #content .mg-lr {
         margin-left: -8px;
         margin-right: -8px;
     }
     #contact .contact-form {
-        margin-top: 16px;
+        margin-top: 32px;
     }
     
 }
